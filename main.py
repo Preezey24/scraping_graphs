@@ -4,7 +4,7 @@ with open('home.html', 'r') as html_file:
     content = html_file.read() 
     
     soup = BeautifulSoup(content, 'lxml')
-    courses = soup.find_all('h5')
-    for course in courses: 
-        print(course.text)
+    course_cards = soup.find_all('div', class_='card')
+    for course in course_cards: 
+        print(course.h5)
     
