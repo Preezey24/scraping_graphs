@@ -5,4 +5,6 @@ with open('home.html', 'r') as html_file:
     
     soup = BeautifulSoup(content, 'lxml')
     courses = soup.find_all('h5')
+    for course in courses: 
+        print(course.text)
     
