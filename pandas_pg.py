@@ -14,4 +14,17 @@ print(ser1['b'])
 
 np.random.seed(101)
 
-df = pd.DataFrame()
+df = pd.DataFrame(randn(4, 4), ['A', 'B', 'C', 'D'],['W', 'X', 'Y', 'Z'])
+print(df['W'])
+
+df['new'] = df['W'] + df['Z']
+print(df)
+
+print(df.drop('A', 0))
+print(df.loc[['A', 'C'], ['X', 'Z']])
+
+bool_df = df > 0 
+print(df[bool_df])
+
+print(df['W'] > 0)
+print(df[df['W']>0]['X'])
