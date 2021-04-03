@@ -27,4 +27,5 @@ bool_df = df > 0
 print(df[bool_df])
 
 print(df['W'] > 0)
-print(df[df['W']>0]['X'])
+print(df[df['W']>0][['X', 'Y']])
+print(df[(df['W']>0) & (df['X']>0)])
