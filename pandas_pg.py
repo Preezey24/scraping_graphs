@@ -63,3 +63,4 @@ print(df.sort_values('col2'))
 df.isnull()
 
 #DATA INPUT OUTPUT 
+data = pd.read_html('https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/learn/lecture/5733226#overview')
