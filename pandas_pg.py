@@ -30,6 +30,11 @@ print(df['W'] > 0)
 print(df[df['W']>0][['X', 'Y']])
 print(df[(df['W']>0) & (df['X']>0)])
 
+#MISSING VALUES
 d = {'A':[1,2,np.nan], 'B':[5, np.nan, np.nan], 'C':[1,2,3]}
 df = pd.DataFrame(d)
-print(df)
+print(df.dropna(axis=1))
+print(df.fillna(value="FILL VALUE"))
+print(df['A'].fillna(value=df['A'].mean()))
+
+#GROUPBY
