@@ -45,3 +45,8 @@ df = pd.DataFrame(data)
 byComp = df.groupby('Company')
 print(byComp.mean())
 print(byComp.max().loc[['GOOG'],['Sales']])
+print(byComp.describe())
+
+#MERGING CONCATENATING 
+#refer to notebook 
+
