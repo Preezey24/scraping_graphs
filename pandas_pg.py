@@ -43,4 +43,5 @@ data = {'Company':['GOOG','GOOG','MSFT','MSFT','FB','FB'],
        'Sales':[200,120,340,124,243,350]}
 df = pd.DataFrame(data)
 byComp = df.groupby('Company')
-print(df.groupby('Company'))
+print(byComp.mean())
+print(byComp.sum().loc['FB'])
