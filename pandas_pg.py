@@ -44,4 +44,4 @@ data = {'Company':['GOOG','GOOG','MSFT','MSFT','FB','FB'],
 df = pd.DataFrame(data)
 byComp = df.groupby('Company')
 print(byComp.mean())
-print(byComp.sum().loc['FB'])
+print(byComp.max().loc[['GOOG'],['Sales']])
