@@ -50,3 +50,7 @@ print(byComp.describe())
 #MERGING CONCATENATING 
 #refer to notebook 
 
+#OPERATIONS
+df = pd.DataFrame({'col1':[1,2,3,4],'col2':[444,555,666,444],'col3':['abc','def','ghi','xyz']})
+print(df['col2'].value_counts())
+print(df[(df['col1']>2) & (df['col2']==444)])
