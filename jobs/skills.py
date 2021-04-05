@@ -1,16 +1,11 @@
 from bs4 import BeautifulSoup
 import requests
 
-for count in range(0,110,10): 
-    if not count: 
-        html_text = requests.get('https://ca.indeed.com/jobs?q=software+developer&l=Vancouver%2C+BC&fromage=last&radius=25').text
-    else: 
-        html_text = requests.get(f'https://ca.indeed.com/jobs?q=software+developer&l=Vancouver%2C+BC&fromage=last&radius=25&start={count}').text
+for page in range(1,11): 
+    html_text = requests.get(f'http://books.toscrape.com/catalogue/page-{page}.html').text
     soup = BeautifulSoup(html_text, 'lxml')
-    jobs = soup.find_all('h2', class_="title")
-    for job in jobs: 
+    books = soup.find_all('li', class_="col-xs-6 col-sm-4 col-md-3 col-lg-3")
+    for book in books: 
         print(jobs.a.text)
         print("")
-    # for job in jobs: 
-    #     print(job.h2.a.text) 
-    #     print("")
+   
