@@ -11,6 +11,7 @@ pandas = "*"
 html5lib = "*"
 flask = "*"
 flask-sqlalchemy = "*"
+gunicorn = "*"
 
 [dev-packages]
 
