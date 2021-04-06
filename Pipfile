@@ -9,6 +9,8 @@ lxml = "*"
 requests = "*"
 pandas = "*"
 html5lib = "*"
+flask = "*"
+flask-sqlalchemy = "*"
 
 [dev-packages]
 
