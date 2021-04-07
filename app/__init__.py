@@ -1,6 +1,6 @@
 from flask import Flask 
-from config import Config
-from models import db, Book
+from .config import Config
+from app.models import db, Book
 
 app = Flask(__name__)
 

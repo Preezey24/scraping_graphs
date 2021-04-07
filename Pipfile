@@ -12,6 +12,8 @@ html5lib = "*"
 flask = "*"
 flask-sqlalchemy = "*"
 gunicorn = "*"
+alembic = "*"
+flask-migrate = "*"
 
 [dev-packages]
 
