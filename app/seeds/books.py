@@ -8,6 +8,6 @@ for page in range(1,11):
     for book in books: 
         print(book.article.h3.text)
         print(book.find('div', class_='product_price').find('p', class_='price_color').text[2:])
-        print(book.article.div.p.text)
+        print(book.find('div', class_='product_price').find('p', class_='instock availability').text.strip())
     print(f'Page: {page}')
    
